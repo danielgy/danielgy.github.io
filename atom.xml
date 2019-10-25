@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-13T09:01:24.775Z</updated>
+  <updated>2019-08-13T03:59:10.085Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/08/13/paper-list/"/>
-    <id>http://yoursite.com/2019/08/13/paper-list/</id>
-    <published>2019-08-13T09:01:24.775Z</published>
-    <updated>2019-08-13T09:01:24.775Z</updated>
-    
-    <content type="html"><![CDATA[<hr><p>title: paper_list<br>toc: true<br>mathjax: true<br>date: 2019-08-13 17:00:45<br>tags:</p><h2 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h2><p>$$\left[<br>\begin{matrix}<br>V_A \\<br>V_B \\<br>V_C \\<br>\end{matrix}<br>\right] =<br>\left[<br>\begin{matrix}<br>1 &amp; 0 &amp; L \\<br>-cosψ &amp; sinψ &amp; L \\<br>-cosψ &amp; -sinψ &amp; L<br>\end{matrix}<br>\right]<br>\left[<br>\begin{matrix}<br>V_x \\<br>V_y \\<br>W \\<br>\end{matrix}<br>\right] $$-</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;p&gt;title: paper_list&lt;br&gt;toc: true&lt;br&gt;mathjax: true&lt;br&gt;date: 2019-08-13 17:00:45&lt;br&gt;tags:&lt;/p&gt;
-&lt;h2 id=&quot;categories&quot;&gt;&lt;a href=&quot;#categories&quot; 
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Paper list of Imbalanced Time-series Classification with Deep Learning</title>
