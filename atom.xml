@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-28T11:17:25.618Z</updated>
+  <updated>2019-10-28T11:20:16.951Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,17 @@
     <link href="http://yoursite.com/2019/10/28/tsfresh-features/"/>
     <id>http://yoursite.com/2019/10/28/tsfresh-features/</id>
     <published>2019-10-28T08:49:47.000Z</published>
-    <updated>2019-10-28T11:17:25.618Z</updated>
+    <updated>2019-10-28T11:20:16.951Z</updated>
     
-    <content type="html"><![CDATA[<p>==Tsfresh中的特征计算算子总结：==</p><ol><li><p>abs_energy(x)<br>Returns the absolute energy of the time series which is the sum over the squared values.<br><strong>绝对能量值</strong>:描述时间序列数据点距离原点的平方距离（波动）。<br>$E=\sum^{n}_{i=1} x^{2}_{i}$</p></li><li><p>absolute_sum_of_changes(x)<br>Returns the sum over the absolute value of consecutive changes in the series x<br><strong>一阶差分绝对和</strong>：描述时间序列相邻点之间的变化情况。<br>$\sum^{n-1}_{i=1} |x_{i+1}-x_i|$</p></li><li><p>agg_autocorrelation(x, param)<br>Calculates the value of an aggregation function $f_{agg}$.<br><strong>各阶自相关系数的聚合统计特征</strong>：统计时间序列数据各阶差分间的聚合特征，依据不同的聚合函数来刻画时序数据的不同特征。</p><p>   $R(l)=\frac{1}{(n-l) \sigma^{2}} \sum_{i=1}^{n-l}\left(x_{i}-\mu\right)\left(x_{i+l}-\mu\right)$</p></li></ol><p>参数：</p><ul><li>parma(list) 包含一个字典{“f_agg”: x, “maxlag”, n} 其中x为聚合函数名，n为最大差分阶数。</li></ul><ol><li>approximate_entropy(x, m, r)<br>Implements a vectorized Approximate entropy algorithm.<br><strong>近似熵</strong>：衡量时序的周期性/不可预测性与波动性</li></ol><p>参数：</p><ul><li>m：对照运行数据长度（int）</li><li>r：过滤阈值（float）</li></ul><ol><li><p>ar_coefficient(x,param)<br><strong>自回归系数</strong>：衡量周期性/不可预测性/波动性</p><p> $X_{t}=\psi_{0}+\sum_{i=1}^{k} \psi_{i} X_{t-i}+\varepsilon_{t}$</p></li></ol><p>参数：</p><ul><li>paramm (lsit) {“coeff”: x, “k”: y}其中“coeff”自回归中第X项系数，“k”为自回归阶数.</li></ul><ol><li><p>autocorrelation(x,lag)<br><strong>lag阶自相关性</strong>：计算lag阶滞后时序数据的自相关性</p></li><li><p>kurtosis(x)<br><strong>峰度</strong>：计算基于修正的Fisher-Pearson矩统计量的峰度</p></li><li><p>maximum(x)/mean(x)/median(x)/minimum(x)</p></li><li>mean_abs_change(x)<br> $\frac{1}{n} \sum_{i=1, \ldots, n-1}\left|x_{i+1}-x_{i}\right|$</li><li>mean_change(x)</li><li><p>mean_second_derivative_central(x)<br>$\frac{1}{n} \sum_{i=1, \ldots, n-1} \frac{1}{2}\left(x_{i+2}-2 \cdot x_{i+1}+x_{i}\right)$</p></li><li><p>quantile(x, q)</p></li><li>sample_entropy(x)</li><li>skewness(x)</li><li>standard_deviation(x）/variance(x)</li><li>sum_values(x)</li></ol>]]></content>
+    <content type="html"><![CDATA[<p><strong>Tsfresh中的特征计算算子总结：</strong></p><ol><li><p>abs_energy(x)<br>Returns the absolute energy of the time series which is the sum over the squared values.<br><strong>绝对能量值</strong>:描述时间序列数据点距离原点的平方距离（波动）。<br>$E=\sum^{n}_{i=1} x^{2}_{i}$</p></li><li><p>absolute_sum_of_changes(x)<br>Returns the sum over the absolute value of consecutive changes in the series x<br><strong>一阶差分绝对和</strong>：描述时间序列相邻点之间的变化情况。<br>$\sum^{n-1}_{i=1} |x_{i+1}-x_i|$</p></li><li><p>agg_autocorrelation(x, param)<br>Calculates the value of an aggregation function $f_{agg}$.<br><strong>各阶自相关系数的聚合统计特征</strong>：统计时间序列数据各阶差分间的聚合特征，依据不同的聚合函数来刻画时序数据的不同特征。</p><p>   $R(l)=\frac{1}{(n-l) \sigma^{2}} \sum_{i=1}^{n-l}\left(x_{i}-\mu\right)\left(x_{i+l}-\mu\right)$</p></li></ol><p>参数：</p><ul><li>parma(list) 包含一个字典{“f_agg”: x, “maxlag”, n} 其中x为聚合函数名，n为最大差分阶数。</li></ul><ol><li>approximate_entropy(x, m, r)<br>Implements a vectorized Approximate entropy algorithm.<br><strong>近似熵</strong>：衡量时序的周期性/不可预测性与波动性</li></ol><p>参数：</p><ul><li>m：对照运行数据长度（int）</li><li>r：过滤阈值（float）</li></ul><ol><li><p>ar_coefficient(x,param)<br><strong>自回归系数</strong>：衡量周期性/不可预测性/波动性</p><p> $X_{t}=\psi_{0}+\sum_{i=1}^{k} \psi_{i} X_{t-i}+\varepsilon_{t}$</p></li></ol><p>参数：</p><ul><li>paramm (lsit) {“coeff”: x, “k”: y}其中“coeff”自回归中第X项系数，“k”为自回归阶数.</li></ul><ol><li><p>autocorrelation(x,lag)<br><strong>lag阶自相关性</strong>：计算lag阶滞后时序数据的自相关性</p></li><li><p>kurtosis(x)<br><strong>峰度</strong>：计算基于修正的Fisher-Pearson矩统计量的峰度</p></li><li><p>maximum(x)/mean(x)/median(x)/minimum(x)</p></li><li>mean_abs_change(x)<br> $\frac{1}{n} \sum_{i=1, \ldots, n-1}\left|x_{i+1}-x_{i}\right|$</li><li>mean_change(x)</li><li><p>mean_second_derivative_central(x)<br>$\frac{1}{n} \sum_{i=1, \ldots, n-1} \frac{1}{2}\left(x_{i+2}-2 \cdot x_{i+1}+x_{i}\right)$</p></li><li><p>quantile(x, q)</p></li><li>sample_entropy(x)</li><li>skewness(x)</li><li>standard_deviation(x）/variance(x)</li><li>sum_values(x)</li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;==Tsfresh中的特征计算算子总结：==&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Tsfresh中的特征计算算子总结：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;abs_energy(x)&lt;br&gt;Returns the absolute energy of the time series which is the sum over the squared 
+&lt;li&gt;&lt;p&gt;abs_energy(x)&lt;br&gt;Returns the absolute energy of the time series which is the sum over
       
     
     </summary>
@@ -58,30 +58,6 @@
       
       
         &lt;h1 id=&quot;1-Graph-Embedding&quot;&gt;&lt;a href=&quot;#1-Graph-Embedding&quot; class=&quot;headerlink&quot; title=&quot;1. Graph Embedding&quot;&gt;&lt;/a&gt;1. Graph Embedding&lt;/h1&gt;&lt;p&gt;&lt;img src
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://yoursite.com/2019/10/27/test/"/>
-    <id>http://yoursite.com/2019/10/27/test/</id>
-    <published>2019-10-27T09:18:48.000Z</published>
-    <updated>2019-10-28T01:41:14.383Z</updated>
-    
-    <content type="html"><![CDATA[<p>$H(Y | X)=\sum_{x \in \mathcal{X}, y \in \mathcal{Y}} p(x, y) \log \left(\frac{p(x)}{p(x, y)}\right)$</p><hr>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;$H(Y | X)=\sum_{x \in \mathcal{X}, y \in \mathcal{Y}} p(x, y) \log \left(\frac{p(x)}{p(x, y)}\right)$&lt;/p&gt;
-&lt;hr&gt;
-
       
     
     </summary>
