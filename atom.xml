@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-27T09:25:42.105Z</updated>
+  <updated>2019-10-28T03:19:53.248Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,21 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Embedding</title>
+    <link href="http://yoursite.com/2019/10/28/Embedding/"/>
+    <id>http://yoursite.com/2019/10/28/Embedding/</id>
+    <published>2019-10-28T03:19:53.000Z</published>
+    <updated>2019-10-28T03:19:53.248Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>test</title>
     <link href="http://yoursite.com/2019/10/27/test/"/>
     <id>http://yoursite.com/2019/10/27/test/</id>
     <published>2019-10-27T09:18:48.000Z</published>
-    <updated>2019-10-27T09:25:42.105Z</updated>
+    <updated>2019-10-28T01:41:14.383Z</updated>
     
-    <content type="html"><![CDATA[<p>$s_{x}$</p><hr><h1 id="我们"><a href="#我们" class="headerlink" title="我们"></a>我们</h1>]]></content>
+    <content type="html"><![CDATA[<p>$H(Y | X)=\sum_{x \in \mathcal{X}, y \in \mathcal{Y}} p(x, y) \log \left(\frac{p(x)}{p(x, y)}\right)$</p><hr>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;$s_{x}$&lt;/p&gt;
+        &lt;p&gt;$H(Y | X)=\sum_{x \in \mathcal{X}, y \in \mathcal{Y}} p(x, y) \log \left(\frac{p(x)}{p(x, y)}\right)$&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&quot;我们&quot;&gt;&lt;a href=&quot;#我们&quot; class=&quot;headerlink&quot; title=&quot;我们&quot;&gt;&lt;/a&gt;我们&lt;/h1&gt;
+
       
     
     </summary>
