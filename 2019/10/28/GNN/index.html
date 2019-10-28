@@ -81,14 +81,20 @@
 
 
 
+<meta name="description" content="1. Graph Embedding 1.1 WHAT &amp;amp; WHYWHAT?  Embedding在数学上是一个函数，$f:X-&amp;gt;Y$, 即讲一个空间的点映射到另一个空间，通常是从高维抽象的空间映射到地位具象的空间； 一般映射到低维空间的表示具有分布式稠密表示的特性  WHY?  抽象的事物应该有一个低维的表示 计算机和神经网络善于处理低维信息 解决one-hot编码问题（稀疏性/两">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GNN">
 <meta property="og:url" content="http://yoursite.com/2019/10/28/GNN/index.html">
 <meta property="og:site_name" content="Daniel&#39;s Blog">
+<meta property="og:description" content="1. Graph Embedding 1.1 WHAT &amp;amp; WHYWHAT?  Embedding在数学上是一个函数，$f:X-&amp;gt;Y$, 即讲一个空间的点映射到另一个空间，通常是从高维抽象的空间映射到地位具象的空间； 一般映射到低维空间的表示具有分布式稠密表示的特性  WHY?  抽象的事物应该有一个低维的表示 计算机和神经网络善于处理低维信息 解决one-hot编码问题（稀疏性/两">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-28T04:03:09.549Z">
+<meta property="og:image" content="http://yoursite.com/.com//1.png">
+<meta property="og:image" content="http://yoursite.com/.com//2.png">
+<meta property="og:updated_time" content="2019-10-28T08:50:01.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GNN">
+<meta name="twitter:description" content="1. Graph Embedding 1.1 WHAT &amp;amp; WHYWHAT?  Embedding在数学上是一个函数，$f:X-&amp;gt;Y$, 即讲一个空间的点映射到另一个空间，通常是从高维抽象的空间映射到地位具象的空间； 一般映射到低维空间的表示具有分布式稠密表示的特性  WHY?  抽象的事物应该有一个低维的表示 计算机和神经网络善于处理低维信息 解决one-hot编码问题（稀疏性/两">
+<meta name="twitter:image" content="http://yoursite.com/.com//1.png">
 
 
 
@@ -328,7 +334,24 @@
       
 
       
-        
+        <h1 id="1-Graph-Embedding"><a href="#1-Graph-Embedding" class="headerlink" title="1. Graph Embedding"></a>1. Graph Embedding</h1><p><img src="/.com//1.png" alt="1"></p>
+<h2 id="1-1-WHAT-amp-WHY"><a href="#1-1-WHAT-amp-WHY" class="headerlink" title="1.1 WHAT &amp; WHY"></a>1.1 WHAT &amp; WHY</h2><p>WHAT?</p>
+<ul>
+<li>Embedding在数学上是一个函数，$f:X-&gt;Y$, 即讲一个空间的点映射到另一个空间，通常是从高维抽象的空间映射到地位具象的空间；</li>
+<li>一般映射到低维空间的表示具有分布式稠密表示的特性</li>
+</ul>
+<p>WHY?</p>
+<ul>
+<li>抽象的事物应该有一个低维的表示</li>
+<li>计算机和神经网络善于处理低维信息</li>
+<li>解决one-hot编码问题（稀疏性/两实体间相关性）</li>
+</ul>
+<h2 id="1-2-Word2Vec"><a href="#1-2-Word2Vec" class="headerlink" title="1.2 Word2Vec"></a>1.2 Word2Vec</h2><p>word2vec是根据语料库中单词的共现关系求出每个单词的embedding。常用word2vec模型有cbow和skip-gram，cbow根据上下文预测中心词，skip-gram根据中心词预测上下文。<br><img src="/.com//2.png" alt="2"><br>Word2vec本质是一个输入不确定的softmax回归，普通的softmax回归输入是确定的，需要求出参数矩阵，而word2vec中，输入的向量和参数矩阵是不确定的，并且输入向量才是我们真正需要的，参数矩阵则是副产品。普通softmax回归是一个凸优化问题，然而word2vec由于输入不确定不是一个凸优化问题，需要采取类似于坐标上升的优化方法。<br>由于两个原因：</p>
+<ol>
+<li>一般来说语料库单词都是很多的，softmax计算（主要是配分函数）会非常耗时</li>
+<li>正负样本极度不均衡<br>优化方法有分层softmax和负采样，最常用的是skip-gram+负采样</li>
+</ol>
+
       
     </div>
     
@@ -361,6 +384,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/28/tsfresh-features/" rel="prev" title="tsfresh_features">
+                tsfresh_features <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -412,8 +439,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -430,12 +466,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
             
 
             
@@ -443,7 +488,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -473,6 +518,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Graph-Embedding"><span class="nav-number">1.</span> <span class="nav-text">1. Graph Embedding</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-WHAT-amp-WHY"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 WHAT &amp; WHY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Word2Vec"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Word2Vec</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
