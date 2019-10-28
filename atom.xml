@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-28T01:41:14.383Z</updated>
+  <updated>2019-10-28T03:56:50.569Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Graph Neural Network</title>
+    <link href="http://yoursite.com/2019/10/28/Graph%20Neural%20Network/"/>
+    <id>http://yoursite.com/2019/10/28/Graph Neural Network/</id>
+    <published>2019-10-28T03:19:53.000Z</published>
+    <updated>2019-10-28T03:56:50.569Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-Graph-Embedding"><a href="#1-Graph-Embedding" class="headerlink" title="1. Graph Embedding"></a>1. Graph Embedding</h1><p><img src="/.com//Graph Embedding Family.png" alt></p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-Graph-Embedding&quot;&gt;&lt;a href=&quot;#1-Graph-Embedding&quot; class=&quot;headerlink&quot; title=&quot;1. Graph Embedding&quot;&gt;&lt;/a&gt;1. Graph Embedding&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/.com//Graph Embedding Family.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="GNN" scheme="http://yoursite.com/categories/GNN/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>test</title>
